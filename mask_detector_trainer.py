@@ -58,3 +58,9 @@ labels = to_categorical(labels)
 #generating numpy arrays
 data = np.array(data, dtype="float32")
 labels = np.array(labels)
+
+
+#splitting dataset into 80:20 for training and testing
+(trainX, testX, trainY, testY) = train_test_split(data, labels,
+	test_size=0.20, stratify=labels, random_state=42)
+
